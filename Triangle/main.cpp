@@ -46,9 +46,9 @@ int main() {
     // Triangle Data
     // Define 3 vertices -- normalized device coordinates, centered in the screen
     float vertices[] = {
-        0.0f, 0.5f, 0.0f, // top
-        -0.5f, -0.5f, 0.0f, // left
-        0.5f, -0.5f, 0.0f //right
+        0.0f, 0.5f, 0.0f, 1.0f, 0.0f, 0.0f, // top vertex, red
+        -0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f, // left vertex, green
+        0.5f, -0.5f, 0.0f, 0.0f, 0.0f, 1.0f //right vertex, blue
     };
 
     // Create VAO and VBO, send data to GPU
@@ -66,8 +66,12 @@ int main() {
     // Layout (location = 0)
     // Says "attribute location 0 should take 3 floats (x, y, z) per vertex from the buffer"
     // Tells GPU how to interpret each chunk of byte from the vertex buffer
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
+
+    // Color Attributes (location = 1)
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
+    glEnableVertexAttribArray(1);
 
     // Load and Compile Shaders
     std::string vertexCode = loadShader("shader.vert");

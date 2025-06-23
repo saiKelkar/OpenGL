@@ -2,8 +2,10 @@
 // This shader is run once per pixel that the triangle covers
 
 #version 330 core
+
+in vec3 vertexColor; // from vertex shader
 out vec4 FragColor;
 
 void main() {
-    FragColor = vec4(1.0, 0.5, 0.2, 1.0); // orange
+    FragColor = vec4(vertexColor, 1.0); // just using it
 }
