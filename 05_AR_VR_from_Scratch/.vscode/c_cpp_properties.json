@@ -1,19 +1,21 @@
 {
-  "configurations": [
-    {
-      "name": "WSL",
-      "includePath": [
-        "/usr/local/include",
-        "/usr/local/include/opencv4",
-        "/usr/include",
-        "/usr/include/c++/9"
-      ],
-      "defines": [],
-      "compilerPath": "/usr/bin/g++",
-      "cStandard": "c11",
-      "cppStandard": "c++17",
-      "intelliSenseMode": "linux-gcc-x64"
-    }
-  ],
-  "version": 4
+    "configurations": [
+        {
+            "name": "WSL",
+            "includePath": [
+                "/usr/local/include",
+                "/usr/local/include/opencv4",
+                "/usr/include",
+                "/usr/include/c++/9",
+                "C:/opencv/opencv/build/include",
+                "C:/opencv/opencv/build/include/opencv2"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
 }

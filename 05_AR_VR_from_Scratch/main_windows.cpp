@@ -1,4 +1,5 @@
 #include <opencv2/opencv.hpp>
+#include <iostream>
 
 int main() {
     // Creates a VideoCapture object, cap(0) tries to open the default webcam
