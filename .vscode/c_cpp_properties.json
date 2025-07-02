@@ -4,7 +4,8 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/usr/local/include/opencv4"
+                "/usr/local/include/opencv4",
+                "${workspaceFolder}/04_Textures/glad/include"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
